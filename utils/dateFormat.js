@@ -1,3 +1,5 @@
-module.exports = (timestamp) => {
-    return new Date(timestamp).toLocaleString();
-  };
+const dateFormat = (date) => {
+  return new Date(timestamp).toLocaleString();
+}
+
+export default dateFormat;
