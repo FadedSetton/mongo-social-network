@@ -2,10 +2,13 @@ import { Thought, User } from '../models/index.js';
 
 export async function getThoughts(req, res) {
   try {
+    console.log('GET /api/thoughts called');
     const thoughts = await Thought.find();
+    console.log('Found thoughts:', thoughts.length);
     res.json(thoughts);
   } catch (err) {
-    res.status(500).json(err);
+    console.error('Error in getThoughts:', err);
+    res.status(500).json({ message: 'Failed to retrieve thoughts', error: err.message });
   }
 }
 

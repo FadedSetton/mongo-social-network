@@ -1,4 +1,4 @@
-const dateFormat = (date) => {
+const dateFormat = (timestamp) => {
   return new Date(timestamp).toLocaleString();
 }
 
